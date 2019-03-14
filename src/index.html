@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WeatherNow</title>
+  <base href="/">
+  <script src="/assets/js/jquery-2.2.3.min.js"></script> 
+<!-- //js --> 
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+<!-- //font-awesome icons -->
+<link href="/assets/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+</head>
+<body>
+
+
+  <app-root></app-root>
+</body>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+<script src="/assets/js/owl.carousel.js"></script>  
+
+<script>
+  $(document).ready(function() { 
+    $("#owl-demo").owlCarousel({
+   
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+   
+      items :5,
+      itemsDesktop : [640,5],
+      itemsDesktopSmall : [414,2],
+      navigation : true
+   
+    });
+    
+  }); 
+</script>
+
+</html>
