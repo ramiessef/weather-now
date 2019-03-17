@@ -1,33 +1,41 @@
+
+<h1> </h1>
 <div class="w3layouts_main_grids">
     <div class="w3layouts_main_grid_left">
       <div class="w3_search">
-        <form action="#" method="post">
-          <input type="text" name="Search" placeholder="Search..." required="">
-          <input type="submit" value=" ">
-        </form>
+          <input list="browsers" class="datalist" placeholder="Enter State..." name="browser" #stat>
+          <datalist id="browsers">
+              <option *ngFor="let state of capitals"> {{state.countryName}}</option>
+          </datalist>
+          <input type="button" value=" " (click)="sendCoutry(stat)">
       </div>
       <div class="w3l_search_bottom">
         <ul class="w3ls_weather">
-          <li><i>9:00 AM</i>Chicago<span>20°</span></li>
+        <li *ngFor="let ci of citys" ><i>{{hour}}:{{min}} AM</i> {{ci.region}}<span> {{ci.wheth}}°</span></li>
+          <!--
+          <li ><i>9:00 AM</i>Chicago<span>20°</span></li>
           <li><i>10:00 AM</i>Miami<span>25°</span></li>
           <li><i>12:00 PM</i>Paris<span>30°</span></li>
           <li><i>11:00 AM</i>Houston<span>35°</span></li>
           <li><i>3:00 PM</i>Barcelona<span>15°</span></li>
           <li><i>6:00 PM</i>Hawaii<span>35°</span></li>
+          -->
         </ul>
-        <ul class="agileits_social_icons">
-          <li><a href="#" class="agileinfo_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-          <li><a href="#" class="wthree_instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          <li><a href="#" class="w3_agileits_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-          <li><a href="#" class="agile_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-        </ul>
+
       </div>
+      <ul class="agileits_social_icons">
+        <li><a href="#" class="agileinfo_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#" class="wthree_instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="#" class="w3_agileits_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="#" class="agile_google"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+      </ul>
     </div>
     <div class="w3layouts_main_grid_right">
       <div class="agileits_w3layouts_main_grid_right">
         <div class="w3_agile_main_grid_left">
-          <h2>Brazil</h2>
-          <p><i class="fa fa-clock-o" aria-hidden="true"></i> 11:00 AM</p>
+          <h2> {{ this.capital }}</h2>
+          <p><i class="fa fa-clock-o" aria-hidden="true"></i> {{getTime() }}</p>
+          <h3> (this.datawhe.main.temp/10).toPrecision(2)}} °</h3>
         </div>
         <div class="w3_agile_main_grid_right">
           <ul class="w3layouts_weather_updates">
@@ -52,7 +60,7 @@
         <div class="clear"> </div>
       </div>
       <div class="w3_agile_main_grid_right1">
-        <div id="owl-demo" class="owl-carousel"> 
+        <div id="owl-demo" class="owl-carousel">
           <div class="item">
             <div class="w3_weather_scroll">
               <h4>10:00 AM</h4>
@@ -102,7 +110,6 @@
   </div>
 
 
-  <div class="agileits_copyright">		 	
-			<p>© 2019 weather-now . All Rights Reserved </p>		 	
+  <div class="agileits_copyright">
+			<p>© 2019 weather-now . All Rights Reserved </p>
     </div>
-    
